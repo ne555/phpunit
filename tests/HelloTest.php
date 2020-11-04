@@ -1,7 +1,7 @@
 <?php
 //require_once 'Hello.php'
 //require_once 'PHPUnit/Framework.php'
-use PHPUnit\Framework\TestCase; //namespace
+use PHPUnit\Framework\TestCase;
 
 //class HelloTest extends PHPUnit_Framework_Testcase
 class HelloTest extends Testcase

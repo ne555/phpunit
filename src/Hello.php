@@ -5,7 +5,7 @@ class Hello
 
 	public function __construct($string = 'hola mundo feliz')
 	{
-		$this->message = $string;
+		$this->message = 'hola '.$string;
 	}
 
 	public function salute()
