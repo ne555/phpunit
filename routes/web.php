@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::get('/shop', function () {
     return view('welcome');
 })->middleware(['auth.shopify'])->name('home');
+
+Route::get('/bonjour', 'App\Http\Controllers\Hola@hello_world');
+Route::get('hello_world','App\Http\Controllers\Hola@hello_world');
