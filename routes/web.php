@@ -23,3 +23,7 @@ Route::get('/shop', function () {
 
 Route::get('/bonjour', 'App\Http\Controllers\Hola@hello_world');
 Route::get('hello_world','App\Http\Controllers\Hola@hello_world');
+
+Route::get('/beta', function(){
+	return view('beta');
+});
