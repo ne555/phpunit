@@ -14,7 +14,6 @@ class HolaTest extends TestCase
     public function testRutaBonjour()
     {
         $response = $this->get('/bonjour');
-
         $response->assertStatus(200);
     }
 }

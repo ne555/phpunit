@@ -72,7 +72,7 @@ class DependencyTest extends TestCase
 			'a' => ['a', 3],
 			'b' => ['b', 2],
 			'c' => ['c', 1],
-			'd=0: nada' => ['d', 10],
+			'nada' => ['d', 0],
 			'e' => ['e', 1]
 		];
 	}
