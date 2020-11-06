@@ -14,6 +14,7 @@ class BagTest extends TestCase
 
 
 	/** Prueba constructor
+	 * Ejemplo assert InstanceOf
 	 */
 	public function testBagConstructor()
 	{
@@ -23,6 +24,8 @@ class BagTest extends TestCase
 	}
 
 	/** Prueba el contenido almacenado
+	 * Ejemplo assert True, False
+	 * y dependencia
 	 * @depends testBagConstructor
 	 */
 	public function testBagContents($bag)
@@ -33,6 +36,8 @@ class BagTest extends TestCase
 
 
 	/** Prueba obtener elementos
+	 * Ejemplo de assert Equals, Null
+	 * y dependencia
 	 * @depends testBagConstructor
 	 */
     public function testTakeOneFromTheBag($bag)
@@ -45,6 +50,8 @@ class BagTest extends TestCase
     }
 	
 
+	/** Ejemplo de asserts Count, Contains, Empty
+	 */
     public function testStartsWithALetter()
     {
         $bag = new Bag(['', '', 'toy', 'torch', 'ball', 'cat', 'tissue']);
