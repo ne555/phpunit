@@ -10,20 +10,10 @@ use App\Bag;
 
 class BagTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $response = $this->get('/');
+	# Test functions for Bag class
 
-        $response->assertStatus(200);
-    }
 
-	# Test function for Box class
-	public function testBoxContents()
+	public function testBagContents()
 	{
 		$bag = new Bag(['toy']);
 		$this->assertTrue($bag->has('toy'));
@@ -31,7 +21,7 @@ class BagTest extends TestCase
 	}
 
 
-    public function testTakeOneFromTheBox()
+    public function testTakeOneFromTheBag()
     {
         $bag = new Bag(['torch']);
         $this->assertEquals('torch', $bag->takeOne());
@@ -56,12 +46,4 @@ class BagTest extends TestCase
         // Empty array if passed even
         $this->assertEmpty($bag->startsWith('s'));
     }
-
-	public function testHola()
-	{
-		$response = $this->get('/bonjour');
-        $response->assertStatus(200);
-		$response->assertSee('hola');
-		$response->assertDontSee('asdf');
-	}
 }
