@@ -13,6 +13,13 @@ class BagTest extends TestCase
 	# Test functions for Bag class
 
 
+	public function testBagConstructor()
+	{
+		$bag = new Bag(['toy']);
+		$this->assertInstanceOf(Bag::class, $bag);
+		return $bag; //es un «provider» para otras pruebas
+	}
+
 	public function testBagContents()
 	{
 		$bag = new Bag(['toy']);
