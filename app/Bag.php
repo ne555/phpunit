@@ -53,5 +53,10 @@ class Bag
             return stripos($item, $letter) === 0;
         });
     }
+
+	public function retrieveItems()
+	{
+		return $this->items;
+	}
 }
 

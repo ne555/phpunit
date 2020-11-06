@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Beta</title>
+        <title>Zeta</title>
     </head>
     <body>
         <h1>This is the Beta page</h1>
