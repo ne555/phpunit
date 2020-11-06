@@ -8,12 +8,10 @@ use Tests\TestCase;
 
 class HolaTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function testExample()
+	/**
+	 * Prueba del redireccionamiento de routes/web.php
+	 */
+    public function testRutaBonjour()
     {
         $response = $this->get('/bonjour');
 

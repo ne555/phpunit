@@ -8,6 +8,8 @@ use Tests\TestCase;
 
 use App\Bag;
 
+/** Uso de dependencias en las pruebas
+ */
 class DependencyTest extends TestCase
 {
 	public function testEmpty()
@@ -38,6 +40,8 @@ class DependencyTest extends TestCase
 		$this->assertNull($nullArray);
 	}
 
+	/** «Producer» para otros tests
+	 */
 	public function testConstruct()
 	{
 		$bag = new Bag([
@@ -50,17 +54,18 @@ class DependencyTest extends TestCase
 		return $bag;
 	}
 
-	/**
+	/** Ejemplo de proveedor y dependencia
+	 * nota: primero los argumentos del provider, después de los producers (depends)
 	 * @depends testConstruct
 	 * @dataProvider containsProvider
-	 * note: primero los argumentos del provider, después de los producers
 	 */
 	public function testContains($letter, $count, $bag)
 	{
-		//$bag = $this->construct();
 		$this->assertCount($count, $bag->startsWith($letter));
 	}
 
+	/** Etiquetado de los casos de prueba
+	 */
 	public function containsProvider(): array
 	{
 		return [

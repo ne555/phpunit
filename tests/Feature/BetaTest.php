@@ -8,7 +8,9 @@ use Tests\TestCase;
 
 class BetaTest extends TestCase
 {
-    public function testExample()
+	/** Ejemplo de assert de contenido html
+	 */
+    public function testPageContentBeta()
     {
         $response = $this->get('/beta');
 
