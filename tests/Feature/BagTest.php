@@ -13,6 +13,8 @@ class BagTest extends TestCase
 	# Test functions for Bag class
 
 
+	/** Prueba constructor
+	 */
 	public function testBagConstructor()
 	{
 		$bag = new Bag(['toy']);
@@ -20,18 +22,22 @@ class BagTest extends TestCase
 		return $bag; //es un «provider» para otras pruebas
 	}
 
-	public function testBagContents()
+	/** Prueba el contenido almacenado
+	 * @depends testBagConstructor
+	 */
+	public function testBagContents($bag)
 	{
-		$bag = new Bag(['toy']);
 		$this->assertTrue($bag->has('toy'));
 		$this->assertFalse($bag->has('ball'));
 	}
 
 
-    public function testTakeOneFromTheBag()
+	/** Prueba obtener elementos
+	 * @depends testBagConstructor
+	 */
+    public function testTakeOneFromTheBag($bag)
     {
-        $bag = new Bag(['torch']);
-        $this->assertEquals('torch', $bag->takeOne());
+        $this->assertEquals('toy', $bag->takeOne());
 
         // Null, now the bag is empty
         $this->assertNull($bag->takeOne());
